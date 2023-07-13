@@ -17,8 +17,8 @@ public class JsonTests {
 
         assertThat(ellipseModel.getObjectType()).isEqualTo("ellipse");
         assertThat(ellipseModel.getId()).isEqualTo("ee8be380-0ba3-e876-ec5f-412cd6442034");
-        assertThat(ellipseModel.getCoords().get(0).getLatitude()).isEqualTo(51.2132282661592);
-        assertThat(ellipseModel.getCoords().get(0).getLongitude()).isEqualTo(34.892406463623054);
+        assertThat(ellipseModel.getCoords().get(0).getLatitude()).isEqualTo(53.70321053273598);
+        assertThat(ellipseModel.getCoords().get(0).getLongitude()).isEqualTo(35.9033203125);
         assertThat(ellipseModel.getTags().getCreator()).isEqualTo("default-creator");
         assertThat(ellipseModel.getTags().isDraggable()).isTrue();
     }
