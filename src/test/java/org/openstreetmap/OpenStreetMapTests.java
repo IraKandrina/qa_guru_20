@@ -15,7 +15,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
-@Disabled
 public class OpenStreetMapTests extends TestBase{
 
     @ValueSource (strings = {"GPS-треки", "Сообщества"})
