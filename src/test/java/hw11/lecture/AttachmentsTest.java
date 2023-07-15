@@ -9,9 +9,6 @@ import static io.qameta.allure.Allure.attachment;
 import static io.qameta.allure.Allure.step;
 
 public class AttachmentsTest {
-    private static final String REPOSITORY = "eroshenkoam/allure-example";
-    private static final int ISSUE = 80;
-
     @Test
     public void testLambdaAttachments() {
         SelenideLogger.addListener("allure", new AllureSelenide());
