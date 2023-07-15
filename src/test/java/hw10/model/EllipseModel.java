@@ -1,6 +1,5 @@
 package hw10.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EllipseModel {
