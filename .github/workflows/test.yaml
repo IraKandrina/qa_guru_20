@@ -25,7 +25,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
       # генеририруем отчет
-      - uses: simple-elf/allure-report-action@master
+      - uses: simple-elf/allure-report-action@main
         if: always()
         with:
           allure_results: build/allure-results
