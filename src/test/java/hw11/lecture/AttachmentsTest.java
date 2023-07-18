@@ -23,7 +23,7 @@ public class AttachmentsTest {
     public void testAnnotatedAttachments() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        WebSteps steps = new WebSteps();
+        WebStepsLecture steps = new WebStepsLecture();
         steps.openMainPage();
         steps.takeScreenshot();
     }

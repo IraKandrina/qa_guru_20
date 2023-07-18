@@ -15,7 +15,7 @@ import static org.openqa.selenium.By.linkText;
 public class LambdaTest {
 
     private static final String REPOSITORY = "allure-examples/allure-mocha-example";
-    private static final int ISSUE = 129;
+    private static final String ISSUE = "Support mocha";
 
     @Test
     public void testLambdaStep() {
@@ -25,14 +25,14 @@ public class LambdaTest {
             open("https://github.com/");
         });
 
-        step("Ищем репозиторий" + REPOSITORY, () -> {
+        step("Ищем репозиторий " + REPOSITORY, () -> {
             $(".search-input").click();
             $(By.name("query-builder-test")).click();
             $(By.name("query-builder-test")).sendKeys(REPOSITORY);
             $(By.name("query-builder-test")).pressEnter();
         });
 
-        step("Кликаем по ссылке репозитория" + REPOSITORY, () -> {
+        step("Кликаем по ссылке репозитория " + REPOSITORY, () -> {
             $(linkText(REPOSITORY)).click();
         });
 
@@ -40,8 +40,8 @@ public class LambdaTest {
             $("#issues-tab").click();
         });
 
-        step("Проверяем наличие Issue с номером" + ISSUE, () -> {
-            $(withText("#" + ISSUE)).should(exist);
+        step("Проверяем наличие Issue с названием " + ISSUE, () -> {
+            $(withText(ISSUE)).should(exist);
         });
     }
 }

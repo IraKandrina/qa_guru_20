@@ -16,7 +16,7 @@ public class WebSteps {
         open("https://github.com/");
     }
 
-    @Step("Ищем репозиторий {repo}")
+    @Step("Ищем репозиторий {repo} ")
     public void searchForRepository(String repo){
         $(".search-input").click();
         $(By.name("query-builder-test")).click();
@@ -24,19 +24,19 @@ public class WebSteps {
         $(By.name("query-builder-test")).pressEnter();
     }
 
-    @Step("Кликаем по ссылке репозитория {repo}")
+    @Step("Кликаем по ссылке репозитория {repo} ")
     public void clickOnrRepositoryLink(String repo){
         $(linkText(repo)).click();
     }
 
-    @Step("Открываем таб Issues")
+    @Step("Открываем таб Issues ")
     public void openIssuesTab(){
         $("#issues-tab").click();
     }
 
-    @Step("Проверяем наличие Issue с номером {issue}")
-    public void shouldSeeIssueWithNumber(int issue){
-        $(withText("#" + issue)).should(exist);
+    @Step("Проверяем наличие Issue с именем {issue} ")
+    public void shouldSeeIssueWithName(String issue){
+        $(withText(issue)).should(exist);
     }
 
 }

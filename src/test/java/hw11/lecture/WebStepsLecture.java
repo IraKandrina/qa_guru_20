@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
-public class WebSteps {
+public class WebStepsLecture {
 
     @Step("Открываем главную страницу")
     public void openMainPage(){
@@ -39,8 +39,8 @@ public class WebSteps {
     }
 
     @Step("Проверяем наличие Issue с номером {issue}")
-    public void shouldSeeIssueWithNumber(int issue){
-        $(withText("#" + issue)).should(exist);
+    public void shouldSeeIssueWithNumber(String issue){
+        $(withText(issue)).should(exist);
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")

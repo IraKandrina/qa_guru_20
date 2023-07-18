@@ -49,12 +49,12 @@ public class StepsTest {
     public void testAnnotatedStep() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        WebSteps steps = new WebSteps();
+        WebStepsLecture steps = new WebStepsLecture();
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
         steps.clickOnrRepositoryLink(REPOSITORY);
         steps.openIssuesTab();
-        steps.shouldSeeIssueWithNumber(ISSUE);
+        steps.shouldSeeIssueWithNumber("#" + ISSUE);
     }
 
 }

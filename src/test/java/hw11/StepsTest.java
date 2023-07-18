@@ -1,13 +1,13 @@
 package hw11;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import hw11.lecture.WebSteps;
+import hw11.lecture.WebStepsLecture;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 public class StepsTest {
 
     private static final String REPOSITORY = "allure-examples/allure-mocha-example";
-    private static final int ISSUE = 129;
+    private static final String ISSUE = "Support mocha";
 
     @Test
     public void testAnnotatedStep() {
@@ -18,7 +18,7 @@ public class StepsTest {
         steps.searchForRepository(REPOSITORY);
         steps.clickOnrRepositoryLink(REPOSITORY);
         steps.openIssuesTab();
-        steps.shouldSeeIssueWithNumber(ISSUE);
+        steps.shouldSeeIssueWithName(ISSUE);
     }
 
 }

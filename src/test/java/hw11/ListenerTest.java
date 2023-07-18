@@ -26,7 +26,7 @@ public class ListenerTest {
 
         $(linkText("allure-examples/allure-mocha-example")).click();
         $("#issues-tab").click();
-        $(withText("129")).should(exist);
+        $(withText("Support mocha")).should(exist);
 
     }
 }
