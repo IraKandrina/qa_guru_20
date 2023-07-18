@@ -1,7 +1,6 @@
 package hw11;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import hw11.lecture.WebStepsLecture;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 public class StepsTest {
