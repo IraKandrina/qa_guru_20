@@ -6,3 +6,4 @@
 /.github/workflows
 /gradle/wrapper
 gradlew
+gradle.properties
