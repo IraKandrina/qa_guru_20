@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Tag("")
+@Tag("remote_api")
 public class ReqresModelTests extends TestBase {
 
     @Test
