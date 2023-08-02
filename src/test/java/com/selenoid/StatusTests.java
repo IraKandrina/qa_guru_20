@@ -78,4 +78,20 @@ public class StatusTests {
                 .body("total", is(20))
                 .body("browsers.chrome", hasKey("100.0"));
     }
+
+    @Test
+    void checkTotalWithJsonScheme(){
+        given()
+                .log().uri()
+                .log().method()
+                .log().body()
+                .when()
+                .get("https://selenoid.autotests.cloud/status")
+                .then()
+                .log().status()
+                .log().body()
+                .statusCode(200)
+                .body("total", is(20))
+                .body("browsers.chrome", hasKey("100.0"));
+    }
 }

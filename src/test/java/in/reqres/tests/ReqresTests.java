@@ -1,4 +1,4 @@
-package in.reqres;
+package in.reqres.tests;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,9 +7,11 @@ import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.*;
 
 public class ReqresTests extends TestBase {
+
     @Test
     void createUserTest(){
         String data = "{ \"name\": \"morpheus\", \"job\": \"leader\" }";
+
         given()
                 .log().all()
                 .contentType(JSON)
