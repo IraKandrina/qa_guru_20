@@ -1,11 +1,14 @@
 package in.reqres.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
 public class GetUserListResponseModel {
+    //@JsonProperty("per_page")
+    //public Integer perPage;
     Integer page, per_page, total, total_pages;
     List<Data> data;
     Support support;
